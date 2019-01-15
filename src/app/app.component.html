@@ -1,0 +1,17 @@
+
+
+<form class="list">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Add A Task!" [(ngModel)] = "newTodo.task" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <button mat-button (click) = 'addTodo()'>Add</button>
+</form>
+
+
+
+<mat-card *ngFor = " let task of tasks">{{task.task}}
+<div style = "margin-left: 1200px">
+  <button mat-button class = "task-button"><i class="material-icons" (click) = 'deleteTodo(task)'>delete</i></button>
+  <button mat-button class = "task-button"><i class="material-icons">create</i></button>
+ </div> 
+</mat-card>
