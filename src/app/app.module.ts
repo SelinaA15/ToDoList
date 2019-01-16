@@ -16,7 +16,7 @@ MatCheckboxModule,
 MatIconModule,
 MatNativeDateModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -38,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCheckboxModule,
     MatIconModule,
     MatNativeDateModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDividerModule
   ],
   providers: [ MatDatepickerModule],
   bootstrap: [AppComponent]

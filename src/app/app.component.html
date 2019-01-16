@@ -8,11 +8,10 @@
 
 
 
-
-<mat-card *ngFor = " let task of this.todoService.tasks">{{task.task}}
-<div style = "margin-left: 1100px">
-  <button mat-button class = "task-button"><i class="material-icons" (click) = 'deleteTodo(task)'>delete</i></button>
-  <button mat-button class = "task-button"><i class="material-icons">create</i></button>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor = " let task of this.todoService.tasks">{{task.task}}
+    <div style = " position:absolute; right:0">
+    <button mat-button class = "task-button"><i class="material-icons" (click) = 'deleteTodo(task)'>delete</i></button>
   <mat-form-field class="example-full-width">
     <input matInput [matDatepicker]="picker" placeholder="Goal Completion Date">
     <mat-datepicker-toggle matSuffix [for]="picker">
@@ -20,5 +19,7 @@
     </mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
- </div> 
-</mat-card>
+</div>
+  </mat-list-item>
+</mat-list>
+

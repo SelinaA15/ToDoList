@@ -1,6 +1,7 @@
 export class Todo {
     
  task: string = '';
+ description: string = '';
  id: number; 
  finished: boolean = false; 
 
