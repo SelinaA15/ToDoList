@@ -23,6 +23,7 @@ export class TodoService {
   }
 
   editTodo(todo: Todo){
+
     var j = this.tasks.indexOf(todo);
     
   }

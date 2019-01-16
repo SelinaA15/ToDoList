@@ -10,6 +10,13 @@ import { FormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule, MatMenuModule,
+MatCheckboxModule,
+MatIconModule,
+MatNativeDateModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -24,9 +31,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FormsModule,
     MatListModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatDividerModule
   ],
-  providers: [],
+  providers: [ MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

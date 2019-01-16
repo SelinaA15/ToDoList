@@ -1,6 +1,5 @@
 
-
-<form class="list">
+<form class="list"  style = "text-align: center">
     <mat-form-field class="example-full-width">
       <input matInput placeholder="Add A Task!" [(ngModel)] = "newTodo.task" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
@@ -9,9 +8,18 @@
 
 
 
-<mat-card *ngFor = " let task of tasks">{{task.task}}
-<div style = "margin-left: 1200px">
-  <button mat-button class = "task-button"><i class="material-icons" (click) = 'deleteTodo(task)'>delete</i></button>
-  <button mat-button class = "task-button"><i class="material-icons">create</i></button>
- </div> 
-</mat-card>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor = " let task of this.todoService.tasks">{{task.task}}
+    <div style = " position:absolute; right:0">
+    <button mat-button class = "task-button"><i class="material-icons" (click) = 'deleteTodo(task)'>delete</i></button>
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" placeholder="Goal Completion Date">
+    <mat-datepicker-toggle matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+  </mat-list-item>
+</mat-list>
+
